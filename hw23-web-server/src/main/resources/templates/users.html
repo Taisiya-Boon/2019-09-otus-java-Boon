@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" content="text/html;">
+<head>
+    <title>Users</title>
+</head>
+<body>
+<h4>Таблица пользователей</h4>
+<#if User_admin == true>
+<a href="admin" style="position: fixed; right: 100%; top: 100%">Перейти к админской страничке</a>
+</#if>
+<table style="width: 400px">
+    <thead>
+    <tr>
+        <td style="width: 50px">Id</td>
+        <td style="width: 150px">Имя</td>
+        <td style="width: 100px">Логин</td>
+        <td style="width: 100px">Пароль</td>
+    </tr>
+    </thead>
+    <tbody>
+    <#list Users as User>
+        <tr>
+            <td>${User.id}</td>
+            <td>${User.name}</td>
+            <td>${User.login}</td>
+            <td>${User.password}</td>
+        </tr>
+    </#list>
+    </tbody>
+</table>
+</body>
+</html>

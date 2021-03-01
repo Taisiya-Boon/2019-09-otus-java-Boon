@@ -31,6 +31,11 @@ public class MyCache<K, V> implements HwCache<K, V> {
   public V get(K key) {
     return cache.get(key);
   }
+
+  public ArrayList<K> getKeys() {
+    return new ArrayList(cache.keySet());
+  }
+
   public long getIn() {
     return cache.size();
   }
